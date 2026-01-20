@@ -132,40 +132,40 @@ export function YachtCatalog() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="bg-zinc-900/50 border-zinc-800 hover:border-zinc-700 transition-colors overflow-hidden">
+      <Card className="bg-white border-gray-200 hover:shadow-xl transition-all overflow-hidden">
         <div className="relative h-64 overflow-hidden">
           <img
             src={yacht.image}
             alt={yacht.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-4 right-4 bg-zinc-900/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-            <span className="text-white font-medium text-sm">{yacht.price}</span>
+          <div className="absolute top-4 right-4 bg-primary backdrop-blur-sm px-3 py-1.5 rounded-full">
+            <span className="text-white font-semibold text-sm">{yacht.price}</span>
           </div>
         </div>
         <CardHeader>
-          <CardTitle className="text-white text-xl">{yacht.name}</CardTitle>
-          <CardDescription className="text-zinc-400">
+          <CardTitle className="text-gray-900 text-xl">{yacht.name}</CardTitle>
+          <CardDescription className="text-gray-600">
             {yacht.type} • {yacht.length} • до {yacht.capacity}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-zinc-300 mb-4">{yacht.description}</p>
+          <p className="text-gray-700 mb-4">{yacht.description}</p>
           <div className="grid grid-cols-2 gap-2">
             {yacht.features.map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-zinc-400 text-sm">
-                <Icon name="Check" size={16} className="text-blue-500 flex-shrink-0" />
+              <div key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
+                <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
                 <span>{feature}</span>
               </div>
             ))}
           </div>
         </CardContent>
         <CardFooter className="flex gap-3">
-          <Button className="flex-1 bg-white text-zinc-900 hover:bg-zinc-100">
+          <Button className="flex-1 bg-primary text-white hover:bg-primary/90">
             <Icon name="Calendar" size={16} className="mr-2" />
             Забронировать
           </Button>
-          <Button variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800">
+          <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100">
             <Icon name="Send" size={16} />
           </Button>
         </CardFooter>
@@ -174,7 +174,7 @@ export function YachtCatalog() {
   )
 
   return (
-    <section className="py-24 px-6" style={{ backgroundColor: "#09090B" }}>
+    <section className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -183,21 +183,21 @@ export function YachtCatalog() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-gray-900 mb-4">
             Наш флот
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Выберите идеальную яхту для вашего путешествия по Балтийскому морю
           </p>
         </motion.div>
 
         <Tabs defaultValue="sailing" className="w-full" onValueChange={setActiveTab}>
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-zinc-900/50 border border-zinc-800">
-            <TabsTrigger value="sailing" className="data-[state=active]:bg-white data-[state=active]:text-zinc-900">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-white border border-gray-200">
+            <TabsTrigger value="sailing" className="data-[state=active]:bg-primary data-[state=active]:text-white">
               <Icon name="Sailboat" size={18} className="mr-2" />
               Парусные яхты
             </TabsTrigger>
-            <TabsTrigger value="motor" className="data-[state=active]:bg-white data-[state=active]:text-zinc-900">
+            <TabsTrigger value="motor" className="data-[state=active]:bg-primary data-[state=active]:text-white">
               <Icon name="Ship" size={18} className="mr-2" />
               Моторные яхты
             </TabsTrigger>
@@ -231,7 +231,7 @@ export function YachtCatalog() {
             <Icon name="MessageCircle" size={20} className="mr-2" />
             Написать в Telegram
           </Button>
-          <p className="text-zinc-500 text-sm mt-3">
+          <p className="text-gray-600 text-sm mt-3">
             Наши специалисты помогут подобрать яхту и ответят на все вопросы
           </p>
         </motion.div>
