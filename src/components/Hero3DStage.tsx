@@ -9,6 +9,7 @@ import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
 import { Footer } from "./Footer"
+import { YachtCatalog } from "./YachtCatalog"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -161,6 +162,7 @@ export function Hero3DStage() {
 
           <LogoCloud />
           <FeatureCardsSection />
+          <YachtCatalog />
           <AISection />
           <ProductDirectionSection />
           <WorkflowsSection />
